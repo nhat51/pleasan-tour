@@ -24,7 +24,7 @@
     box-shadow:0 0 0 0.2rem rgba(2,184,117,0.5)
     }
 .btn-outline-success.disabled,.btn-outline-success:disabled{
-    color:#02b875;background-color:transparent
+    color:#1761A0;background-color:transparent
     }
 .btn-outline-success:not(:disabled):not(.disabled):active,.btn-outline-success:not(:disabled):not(.disabled).active,.show>.btn-outline-success.dropdown-toggle{
     color:#fff;
