@@ -61,6 +61,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  background-image: url("../img/bg/background.jpg");
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -153,14 +154,14 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #1760a0;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #eea319;
+  text-decoration: none;
 }
 
 a:not([href]) {
