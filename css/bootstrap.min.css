@@ -20,8 +20,8 @@
     border-color:#1761A0
     }
 .btn-outline-success:focus,.btn-outline-success.focus{
-    -webkit-box-shadow:0 0 0 0.2rem rgba(2,184,117,0.5);
-    box-shadow:0 0 0 0.2rem rgba(2,184,117,0.5)
+    -webkit-box-shadow:0 0 0 0.2rem rgba(23,97,160,0.5);
+    box-shadow:0 0 0 0.2rem rgba(23,97,160,0.5)
     }
 .btn-outline-success.disabled,.btn-outline-success:disabled{
     color:#1761A0;background-color:transparent

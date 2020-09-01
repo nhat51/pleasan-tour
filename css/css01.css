@@ -7,11 +7,13 @@
 }
 
 .fa-facebook {
-    color: #343a40;
+    background: #3b5998;
+    color: white;
 }
 
 .fa-twitter {
-    color: #343a40;
+    background: #55acee;
+    color: white;
 }
 
 .fa-google {
@@ -25,13 +27,12 @@
 }
 
 .fa-instagram {
-    color: #343a40;
+    background: #3f729b;
+    color: white;
 }
-.bg {
-    background-image: url("../img/bg/background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.bgamerica{
+    background: url("../img/Flag_of_the_United_States.svg");
+    visibility: initial;
 }
 
 
