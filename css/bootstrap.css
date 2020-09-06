@@ -61,7 +61,6 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
-  background-image: url("../img/bg/background.jpg");
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4673,7 +4672,7 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255);
+  border-color: rgba(255, 255, 255,0.5);
 }
 
 .navbar-light .navbar-toggler-icon {
