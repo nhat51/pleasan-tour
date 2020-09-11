@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <title>Pleasant Tour</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/css01.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="css/css01.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/css/all.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     <!--            TOPNAV-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="index.html"><img alt="Logo" src="img/logo.png"></a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
-                data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-0 sticky-top">
+        <a class="navbar-brand" href="index.html"><img class="w-50" alt="Logo" src="img/logo.png"></a>
+        <button aria-controls="topnavbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-target="#topnavbar" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="topnavbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
@@ -29,9 +29,9 @@
                         Domestic
                     </a>
                     <div aria-labelledby="internationalDropdown" class="dropdown-menu">
-                        <a class="dropdown-item" href="domestic/hoian/hoian.html">Sapa</a>
+                        <a class="dropdown-item" href="domestic/hoian/hoian.html">Hoi An</a>
                         <a class="dropdown-item" href="domestic/halong/halong.html">Ha Long</a>
-                        <a class="dropdown-item" href="domestic/danang/danang.html">Nha Trang</a>
+                        <a class="dropdown-item" href="domestic/danang/danang.html">Da Nang</a>
                         <a class="dropdown-item" href="domestic/dalat/dalat.html">Da Lat</a>
 
                     </div>
@@ -42,19 +42,19 @@
                         International
                     </a>
                     <div aria-labelledby="internationalDropdown" class="dropdown-menu">
-                        <a class="dropdown-item" href="../international/america.html">America</a>
-                        <a class="dropdown-item" href="../international/japan.html">Japan</a>
-                        <a class="dropdown-item" href="../international/korea.html">Korea</a>
-                        <a class="dropdown-item" href="../international/france.html">France</a>
+                        <a class="dropdown-item" href="international/america/america.html">America</a>
+                        <a class="dropdown-item" href="international/japan/japan.html">Japan</a>
+                        <a class="dropdown-item" href="international/korea/korea.html">Korea</a>
+                        <a class="dropdown-item" href="international/france/france.html">France</a>
                     </div>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="onsale.html">Sales <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="onsale.html">Sales</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input id="topsearch" aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
     </nav>
@@ -105,6 +105,570 @@
         </ol>
     </nav>
     <!--            BODY-->
+    <div class="container justify-content-center">
+        <div class="row">
+            <!--Hoi An-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/gallery-1.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">On Sale 15%</h5>
+                        <p class="card-text col-md-11">The interesting trip to travel in Hoi An old town</p>
+                        <!--book button-->
+                        <button class="btn btn-primary " type="submit" data-toggle="modal" data-target="#booking">Book Now</button>
+                        <!--modal-->
+                        <div class="modal fade" id="booking" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Booking Trips</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-success fade" id="booked" role="alert">
+                                        <strong>Booking Successfully!</strong> Thank for used our services
+                                        <a href="index.html">Back to home page</a>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <h5>Billing Address</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <h5>Payment</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Full Name</label>
+                                                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Accepted Cards</label>
+                                                    <div class="icon-container form-control">
+                                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">Email</label>
+                                                    <input class="form-control" type="text" id="email" name="email" placeholder="john@example.com">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cname">Name on Card</label>
+                                                    <input class="form-control" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="adr">Address</label>
+                                                    <input class="form-control" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="ccnum">Credit card number</label>
+                                                    <input class="form-control" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="city">City</label>
+                                                    <input class="form-control" type="text" id="city" name="city" placeholder="New York">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expmonth">Exp Month</label>
+                                                    <input class="form-control" type="text" id="expmonth" name="expmonth" placeholder="11">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expyear">Exp Year</label>
+                                                    <input class="form-control" type="text" id="expyear" name="expyear" placeholder="21">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="cvv">CVV</label>
+                                                    <input class="form-control" type="text" id="cvv" name="cvv" placeholder="352">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#booked">Book</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Da Lat-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/gallery-1.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">On Sale 17%</h5>
+                        <p class="card-text col-md-11">Travel in Da Lat City with Love Valley and many attractive place is waiting for you explore </p>
+                        <!--book button-->
+                        <button class="btn btn-primary " type="submit" data-toggle="modal" data-target="#booking">Book Now</button>
+                        <!--modal-->
+                        <div class="modal fade" id="booking" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Booking Trips</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-success fade" id="booked" role="alert">
+                                        <strong>Booking Successfully!</strong> Thank for used our services
+                                        <a href="index.html">Back to home page</a>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <h5>Billing Address</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <h5>Payment</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Full Name</label>
+                                                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Accepted Cards</label>
+                                                    <div class="icon-container form-control">
+                                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">Email</label>
+                                                    <input class="form-control" type="text" id="email" name="email" placeholder="john@example.com">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cname">Name on Card</label>
+                                                    <input class="form-control" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="adr">Address</label>
+                                                    <input class="form-control" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="ccnum">Credit card number</label>
+                                                    <input class="form-control" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="city">City</label>
+                                                    <input class="form-control" type="text" id="city" name="city" placeholder="New York">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expmonth">Exp Month</label>
+                                                    <input class="form-control" type="text" id="expmonth" name="expmonth" placeholder="11">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expyear">Exp Year</label>
+                                                    <input class="form-control" type="text" id="expyear" name="expyear" placeholder="21">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="cvv">CVV</label>
+                                                    <input class="form-control" type="text" id="cvv" name="cvv" placeholder="352">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#booked">Book</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Ha Long-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/gallery-1.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">On Sale 10%</h5>
+                        <p class="card-text col-md-11">Explore limestone mountains in Ha Long Bay and witness the grandeur of nature</p>
+                        <!--book button-->
+                        <button class="btn btn-primary " type="submit" data-toggle="modal" data-target="#booking">Book Now</button>
+                        <!--modal-->
+                        <div class="modal fade" id="booking" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Booking Trips</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-success fade" id="booked" role="alert">
+                                        <strong>Booking Successfully!</strong> Thank for used our services
+                                        <a href="index.html">Back to home page</a>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <h5>Billing Address</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <h5>Payment</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Full Name</label>
+                                                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Accepted Cards</label>
+                                                    <div class="icon-container form-control">
+                                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">Email</label>
+                                                    <input class="form-control" type="text" id="email" name="email" placeholder="john@example.com">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cname">Name on Card</label>
+                                                    <input class="form-control" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="adr">Address</label>
+                                                    <input class="form-control" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="ccnum">Credit card number</label>
+                                                    <input class="form-control" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="city">City</label>
+                                                    <input class="form-control" type="text" id="city" name="city" placeholder="New York">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expmonth">Exp Month</label>
+                                                    <input class="form-control" type="text" id="expmonth" name="expmonth" placeholder="11">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expyear">Exp Year</label>
+                                                    <input class="form-control" type="text" id="expyear" name="expyear" placeholder="21">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="cvv">CVV</label>
+                                                    <input class="form-control" type="text" id="cvv" name="cvv" placeholder="352">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#booked">Book</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <!--Da Nang-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/gallery-1.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">On Sale 10%</h5>
+                        <p class="card-text col-md-11">Travel in Da Nang City where the beaches and resorts,you will relax</p>
+                        <!--book button-->
+                        <button class="btn btn-primary " type="submit" data-toggle="modal" data-target="#booking">Book Now</button>
+                        <!--modal-->
+                        <div class="modal fade" id="booking" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Booking Trips</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-success fade" id="booked" role="alert">
+                                        <strong>Booking Successfully!</strong> Thank for used our services
+                                        <a href="index.html">Back to home page</a>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <h5>Billing Address</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <h5>Payment</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Full Name</label>
+                                                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Accepted Cards</label>
+                                                    <div class="icon-container form-control">
+                                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">Email</label>
+                                                    <input class="form-control" type="text" id="email" name="email" placeholder="john@example.com">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cname">Name on Card</label>
+                                                    <input class="form-control" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="adr">Address</label>
+                                                    <input class="form-control" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="ccnum">Credit card number</label>
+                                                    <input class="form-control" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="city">City</label>
+                                                    <input class="form-control" type="text" id="city" name="city" placeholder="New York">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expmonth">Exp Month</label>
+                                                    <input class="form-control" type="text" id="expmonth" name="expmonth" placeholder="11">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expyear">Exp Year</label>
+                                                    <input class="form-control" type="text" id="expyear" name="expyear" placeholder="21">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="cvv">CVV</label>
+                                                    <input class="form-control" type="text" id="cvv" name="cvv" placeholder="352">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#booked">Book</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Sa Pa-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/gallery-1.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">On Sale 17%</h5>
+                        <p class="card-text col-md-11">Sapa is the best place with Hoang Lien Son mountains </p>
+                        <!--book button-->
+                        <button class="btn btn-primary " type="submit" data-toggle="modal" data-target="#booking">Book Now</button>
+                        <!--modal-->
+                        <div class="modal fade" id="booking" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Booking Trips</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-success fade" id="booked" role="alert">
+                                        <strong>Booking Successfully!</strong> Thank for used our services
+                                        <a href="index.html">Back to home page</a>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <h5>Billing Address</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <h5>Payment</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Full Name</label>
+                                                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Accepted Cards</label>
+                                                    <div class="icon-container form-control">
+                                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">Email</label>
+                                                    <input class="form-control" type="text" id="email" name="email" placeholder="john@example.com">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cname">Name on Card</label>
+                                                    <input class="form-control" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="adr">Address</label>
+                                                    <input class="form-control" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="ccnum">Credit card number</label>
+                                                    <input class="form-control" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="city">City</label>
+                                                    <input class="form-control" type="text" id="city" name="city" placeholder="New York">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expmonth">Exp Month</label>
+                                                    <input class="form-control" type="text" id="expmonth" name="expmonth" placeholder="11">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expyear">Exp Year</label>
+                                                    <input class="form-control" type="text" id="expyear" name="expyear" placeholder="21">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="cvv">CVV</label>
+                                                    <input class="form-control" type="text" id="cvv" name="cvv" placeholder="352">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#booked">Book</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Ho Guom-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/gallery-1.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">On Sale 20%</h5>
+                        <p class="card-text col-md-11">Seek cultural values and enjoy the beauty of Hoan Kiem Lake</p>
+                        <!--book button-->
+                        <button class="btn btn-primary " type="submit" data-toggle="modal" data-target="#booking">Book Now</button>
+                        <!--modal-->
+                        <div class="modal fade" id="booking" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Booking Trips</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-success fade" id="booked" role="alert">
+                                        <strong>Booking Successfully!</strong> Thank for used our services
+                                        <a href="index.html">Back to home page</a>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <h5>Billing Address</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <h5>Payment</h5>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Full Name</label>
+                                                    <input class="form-control" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="fname">Accepted Cards</label>
+                                                    <div class="icon-container form-control">
+                                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">Email</label>
+                                                    <input class="form-control" type="text" id="email" name="email" placeholder="john@example.com">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cname">Name on Card</label>
+                                                    <input class="form-control" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="adr">Address</label>
+                                                    <input class="form-control" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="ccnum">Credit card number</label>
+                                                    <input class="form-control" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="city">City</label>
+                                                    <input class="form-control" type="text" id="city" name="city" placeholder="New York">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expmonth">Exp Month</label>
+                                                    <input class="form-control" type="text" id="expmonth" name="expmonth" placeholder="11">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="expyear">Exp Year</label>
+                                                    <input class="form-control" type="text" id="expyear" name="expyear" placeholder="21">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="cvv">CVV</label>
+                                                    <input class="form-control" type="text" id="cvv" name="cvv" placeholder="352">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#booked">Book</button>
+                                    </div>
+                                    <p>âsas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-4">
+            <nav aria-label="Page ">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#"><<</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">>></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <!--            FOOTER-->
     <div class="row mt-4 bg-secondary">
         <div class="col-12">
